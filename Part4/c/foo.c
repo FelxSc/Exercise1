@@ -1,7 +1,6 @@
 #include <pthread.h>
 #include <stdio.h>
 
-#define MAX_NUM 999999
 int i = 0;
 
 
@@ -9,7 +8,7 @@ int i = 0;
 void* incrementingThreadFunction(){
     // TODO: increment i 1_000_000 times
     int x;
-    for(x = 0; x == MAX_NUM; x++)
+    for(x = 0; x < 1000000; x++)
     {
         i++;
     }
@@ -22,7 +21,7 @@ void* incrementingThreadFunction(){
 void* decrementingThreadFunction(){
     // TODO: decrement i 1_000_000 times
     int x;
-    for(x = 0; x == MAX_NUM; x++)
+    for(x = 0; x < 1000000; x++)
     {
         i--;
     }
