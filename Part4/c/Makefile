@@ -1,6 +1,6 @@
 CC = clang
 
-CFLAGS = -Wall -g -std=c99 
+CFLAGS = -Wall -g -std=c99
 LDFLAGS = -lpthread -g
 SRC = foo.c
 
@@ -17,7 +17,7 @@ $(TARGET): $(OBJ)
 
 # Compile: create object files from C source files.
 %.o : %.c
-	$(CC) $(CFLAGS) -c  $< -o $@ 
+	$(CC) $(CFLAGS) -c  $< -o $@
 
 # rule for cleaning re-compilable files.
 clean:
