@@ -6,7 +6,7 @@ To complete this exercise you will have to use git. Create one or several commit
 When answering the questions, remember to use all the resources at your disposal. Asking the internet isn't a form of "cheating", it's a way of learning.
 
  ### What is concurrency? What is parallelism? What's the difference?
- > Concurrency means that different parts of a programm run at the same, but the processes only seem to run at the same time. These concurrent processes are interleaved. This means that every process has a specific time span in which it can be executed. If the process does not finish during this time slice, it is paused and another process is executed.
+ > Concurrency means that different parts of a program run at the same, but the processes only seem to run at the same time. These concurrent processes are interleaved. This means that every process has a specific time span in which it can be executed. If the process does not finish during this time slice, it is paused and another process is executed.
  > Parallelism means that processes are executed at the same time instant. This approach needs several processors to be made possible.
  > Difference: Concurrency is used on the single core and parallelism can be used with several cores.
 
