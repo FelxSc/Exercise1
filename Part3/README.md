@@ -24,14 +24,14 @@ When answering the questions, remember to use all the resources at your disposal
 
  ### What are the differences between processes, threads, green threads, and coroutines?
  > A process is an instance of a computer program that is being executed. It is the acutal execution of the program instructions.
- > A thread is a component of a process. It can be scheduled (typically by the OS) and therefore run concurrently. Several threads can exist concurrently within one process.
+ > A thread is a component of a process. It can be scheduled (typically by the OS) and therefore run concurrently. Several threads can exist concurrently within one process. Threads can share memory, processes cannot.
  > A green thread are scheduled by a runtime library or a virtual machine instead by an OS.
  > Coroutines are similar to threads. They are cooperatively multitasked, which means that not the OS initiates a context switch but the process itself. Therefore, coroutines provide concurrency, but not parallelism.
 
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > The 'pthread_create()'-function creates a new thread in the calling process. The attributes of this thread can be configured by passing parameters to that function.
+ > The 'pthread_create()'-function creates a new OS-thread in the calling process. The attributes of this thread can be configured by passing parameters to that function.
  > 'threading.Thread()' creates a thread in Python, to which a function is passed. Those threads are then executed concurrently.
- > 'go' launches a go-routine. It is a function executing concurrently with other go-routines. There can be several go-routines running in a thread. Threads have higher cost (in terms of memory space) than go-routines.
+ > 'go' launches a go-routine. It is a function executing concurrently with other go-routines. There can be several go-routines running in a thread. Threads have higher cost (in terms of memory space) than go-routines. Managed by the runtime library.
 
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > The GIL is a mutex, that prevents several threads from being executed at the same time. This means only one thread is able to hold the control of the Python interpreter. If two threads simultaneously increment the reference count on an object, it could happen that it is only increased once. It can therefore be a bottleneck.
